@@ -1,4 +1,3 @@
-import java.util.*;
 public class CylinderConstruct {
     private int radius;
     private int height;
