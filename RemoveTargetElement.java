@@ -8,7 +8,7 @@ public class RemoveTargetElement {
             }
         }
         for(int i = 0; i < index ; i++){
-            System.out.print(" " + arr[i]);
+            System.out.print(arr[i] + " ");
         }
     }
    public static void main(String[] args) {
