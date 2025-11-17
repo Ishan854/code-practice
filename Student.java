@@ -21,7 +21,7 @@ public class Student {
 
     public void enrollCourse(String courses){
         if(validateCourse(courses)){
-            if (!courses.contains(courses) && validateCourse(courses)) {
+            if (!course.contains(courses) && validateCourse(courses)) {
                 course.add(courses); 
                 System.out.println("Student is enrolled to " + courses + " Successfully!!");
             }else{
@@ -62,7 +62,7 @@ public class Student {
     public boolean validateStudentId(String studentId){
         String studentRegex = "S-\\d+$";
         Pattern studPattern = Pattern.compile(studentRegex);
-        Matcher studenMatcher = studPattern.matcher(studentRegex);
+        Matcher studenMatcher = studPattern.matcher(studentId);
         if(studenMatcher.matches()){
             return true;
         }else{
@@ -74,7 +74,7 @@ public class Student {
     public boolean validateName(String name){
         String nameRegex = "^[a-zA-Z\\s]+$";
         Pattern namePattern = Pattern.compile(nameRegex);
-        Matcher nameMatcher = namePattern.matcher(nameRegex);
+        Matcher nameMatcher = namePattern.matcher(name);
         if(nameMatcher.matches()){
             return true;
         }else{
@@ -92,7 +92,7 @@ public class Student {
     }
 
     public boolean validateCourse(String courses){
-        if (courses.equalsIgnoreCase("Java") && courses.equalsIgnoreCase("Python") && courses.equalsIgnoreCase("DevOps")) {
+        if (courses.equalsIgnoreCase("Java") || courses.equalsIgnoreCase("Python") || courses.equalsIgnoreCase("DevOps")) {
             return true;
         }else{
             System.err.println("Invalid Course!! Please enter the course form the give list [Java, DSA, DevOps]");

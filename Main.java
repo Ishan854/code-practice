@@ -25,7 +25,7 @@ public class Main {
         studentList.add(s3);
         System.out.println(studentList);
 
-        Student result = findStudentById("S-136");
+        Student result = findStudentById("S-2022");
 
         System.out.println("Result: " + result);
 
